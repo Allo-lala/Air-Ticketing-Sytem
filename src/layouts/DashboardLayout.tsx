@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, Link, useLocation, Navigate } from 'react-router-dom';
 import { 
-  Menu, X, Plane, User, LogOut, Home, 
+  Menu, X, Plane, User, Home, 
   Briefcase, Users, Settings, ChevronDown,
   Bell, Search
 } from 'lucide-react';
@@ -10,7 +10,7 @@ import { useAuth } from '../hooks/useAuth';
 const DashboardLayout: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
 
   // If user is not logged in, redirect to login page
   if (!user) {
@@ -19,7 +19,6 @@ const DashboardLayout: React.FC = () => {
 
   const isAdmin = user.role === 'admin';
   const isAgent = user.role === 'agent';
-  const isAccountant = user.role === 'accountant';
 
   return (
     <div className="min-h-screen flex bg-gray-100">
