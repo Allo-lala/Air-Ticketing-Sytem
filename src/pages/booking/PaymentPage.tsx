@@ -322,7 +322,7 @@ const PaymentPage: React.FC = () => {
               <div className="border rounded-lg p-6">
                 <h3 className="font-medium mb-4">Bank Transfer Details</h3>
                 <div className="space-y-3 text-gray-600">
-                  <p>Bank: SkyWays International Bank</p>
+                  <p>Bank: Absa</p>
                   <p>Account Name: SkyWays Airlines Ltd</p>
                   <p>Account Number: 1234567890</p>
                   <p>Sort Code: 12-34-56</p>
